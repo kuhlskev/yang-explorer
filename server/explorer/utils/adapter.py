@@ -193,12 +193,12 @@ class Adapter(object):
         return 'Invalid target %s for script gen' % str(target)
 
 
-    @staticmethod
+'''    @staticmethod
     def gen_ydk_script(username, payload):
         """
         Generate YDK python script that uses Netconf provider and Netconf/CRUD services 
         """
-''' Currently can break operation of YANG-Explorer as a whole
+ Currently can break operation of YANG-Explorer as a whole
         logging.debug('gen_ydk_script: payload : \n' + payload)
 
         payload = payload.replace('<metadata>', '')
