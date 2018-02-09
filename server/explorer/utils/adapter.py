@@ -198,7 +198,7 @@ class Adapter(object):
         """
         Generate YDK python script that uses Netconf provider and Netconf/CRUD services 
         """
-
+''' Currently can break operation of YANG-Explorer as a whole
         logging.debug('gen_ydk_script: payload : \n' + payload)
 
         payload = payload.replace('<metadata>', '')
@@ -282,7 +282,7 @@ class Adapter(object):
         # generate script
         rendered = render_to_string('ydkscript.py', args)
         script = ET.Element('script')
-        script.text = ET.CDATA(rendered)
+        script.text = ET.CDATA(rendered) '''
         return script
 
     @staticmethod
